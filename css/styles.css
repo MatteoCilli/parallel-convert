@@ -95,7 +95,7 @@ ul.worlds li.alternate-world:hover {
 
 .info {
     display: inline-block;
-    width: 63%;
+    width: 80%;
     margin-left: 80px;
 }
 
@@ -168,6 +168,12 @@ ul.worlds::-webkit-scrollbar-thumb {
     cursor: pointer;
     transition: background-color 0.25s;
     position: relative;
+}
+
+@media (max-width: 992px) {
+    ul.worlds li.alternate-world {
+        height: 140px;
+    }
 }
 
 @media (max-width: 600px) {
