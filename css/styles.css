@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #505562;
+    color: #fff;
+}
+
+.container {
+    width: 500px;
+    margin: 20px auto;
+    user-select: none;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.header {
+    background-color: #2d2d37;
+    text-align: center;
+    padding: 1.75rem;
+}
+
+.header h1 {
+    font-size: 2.25rem;
+}
+
+.date {
+    background-color: #222;
+    text-align: right;
+    font-size: 0.75rem;
+    padding: 0.75rem 2rem 0.75rem 0;
+}
+
+ul.worlds {
+    height: calc(100vh - 40px - 100px - 40px - 58px);
+    background-color: #222;
+    padding: 0 1.5rem 1rem 1.5rem;
+    overflow-y: auto;
+}
+
+ul.worlds li {
+    background-color: #2d2d37;
+    border-radius: 5px;
+    list-style: none;
+    padding: 1rem 1rem 0.75rem 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+ul.worlds li:last-child {
+    margin-bottom: 0;
+}
+
+ul.worlds li.base-world {
+    background-color: #264d73;
+}
+
+ul.worlds li.alternate-world {
+    height: 90px;
+    transition: all .2s ease-in-out;
+}
+
+ul.worlds li.alternate-world:hover {
+    background-color: #7488a7;
+    transform: scale(1.05);
+}
+
+.alternate-world .base-world-date {
+    opacity: 0;
+}
+
+.alternate-world.active {
+    background-color: #096e55;
+}
+
+.alternate-world.active .base-world-date {
+    opacity: 1;
+}
+
+.flag {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #fff;
+    vertical-align: top;
+}
+
+.info {
+    display: inline-block;
+    width: 63%;
+    margin-left: 80px;
+}
+
+.info .input span {
+    font-size: 1.5rem;
+    display: inline-block;
+    width: 4rem;
+    text-align: center;
+}
+
+.info .input input {
+    font-size: 1.5rem;
+    width: 78%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.info .world-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-left: 4rem;
+}
+
+.info .base-world-date {
+    font-size: 1rem;
+    margin-left: 4rem;
+}
+
+ul.worlds li .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+ul.worlds li .close:hover {
+    color: #fff;
+}
+
+
+/* Scrollbar */
+
+ul.worlds::-webkit-scrollbar {
+    width: 5px;
+}
+
+ul.worlds::-webkit-scrollbar-thumb {
+    background-color: #2d2d37;
+    border-bottom: 1rem solid #222;
+}
+
+.convert-btn {
+    background-color: #00b386;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-top: 3px solid #222;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.25s;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    ul.worlds {
+        height: calc(100vh - 83px - 34px - 51px);
+    }
+    .header h1 {
+        font-size: 2rem;
+    }
+    .flag {
+        width: 3rem;
+        height: 2rem;
+    }
+    .info .input span {
+        font-size: 1.25rem;
+        width: 3.5rem;
+    }
+    .info .input input {
+        font-size: 1.25rem;
+        width: 76%;
+    }
+    .info .world-name {
+        margin-left: 1.5rem;
+    }
+    .info .base-world-date {
+        margin-left: 1.5rem;
+    }
+    ul.worlds li.alternate-world {
+        height: 115px;
+    }
+}
